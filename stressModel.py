@@ -230,7 +230,7 @@ def myLSTMbinaryClassification():
 
     #? accuracy stuff
     a.precisionRecallCalc(true_labels, predicted_labels)
-    a.f1Score(true_labels, predicted_probs, predicted_labels)
+    a.f1Score(true_labels, predicted_labels)
     rocFig = a.rocCurve(true_labels, predicted_probs, numLayers, lookback, batch_size, hiddenLayerSize)
     prFig = a.prCurve(true_labels, predicted_probs, numLayers, lookback, batch_size, hiddenLayerSize)
     plt.show()
